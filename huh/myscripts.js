@@ -1,4 +1,4 @@
-function print(a){
+function print(...a){
   console.log(a);
 }
 var numberr = {"a":1,"b":2}
