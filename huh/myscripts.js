@@ -1,6 +1,4 @@
-function print(a){
-  console.log(a);
-}
+const print=console.log;
 var numberr = {"a":1,"b":2}
 function num(key,a){
     if (isNaN(numberr[key])){
