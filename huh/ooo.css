@@ -1,7 +1,7 @@
-.error{
+.text_box{
   background-color: #202225;
   font-family: 'Courier New', Courier, monospace;
-  color: red;
+  color: lime;
   border-radius: 10px;
   padding: 2px 3px;
 }
@@ -37,6 +37,30 @@
 .button_default:hover{
     color: #ffffff;
     background-color: #b9bbbe;
+}
+.button_1{
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 6px;
+  color: #24292e;
+  background-color: #fafbfc00;
+  border-color: #ffffff;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+  color: #ffffff;
+}
+.button_1:hover{
+    background-color: #f3f4f600;
+    border-color: #ffffff89;
+    transition-duration: 0.1s;
 }
 body{
   background-color: #363940;
@@ -85,4 +109,33 @@ body{
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+#input_text{
+    /*height:10px;*/
+    width: 1400px;
+    font-size:10pt;
+}
+.scroll{
+ /**/
+}
+/* width */
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #202225; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3; 
 }
