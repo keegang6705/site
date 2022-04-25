@@ -3,13 +3,12 @@
 <link rel="stylesheet" type="text/css" href="huh/ooo.css"/>
 <script src="huh/myscripts.js"></script>
 <head>
-    <title>what is this</title>
+    <title>idk but look good</title>
+    <meta charset="UTF-8">
 </head>
 <body>
    <div class="text_default">
        <h1>idk</h1>
-       <h1>อย่ากดนะ</h1>
-       <h1>อย่าาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาา</h1>
        <!--<button type="button" onclick="alert('You pressed the button!')">Click me!</button>-->
    </div>
    <div class="text_default">
@@ -19,8 +18,21 @@
    </div>
    <button type="button" class="button_default" onclick="fun_snackbar(num('d',1),'from d')">d button</button>
    <div id="snackbar-container"></div>
-   <div class="error">
-        <p> hello<br>um hellooo<p>
-   </div>
+   <div class="text_box">
+        <p id="text_in_textbox" style="overflow-y: scroll;height: 500px;" class="scroll" > Keegang Console [Version 2.3]<br>(c) 2022 Keegang Corporation. All rights reserved.<br>C:\Users\unidentified><br><p>
+        <input type="text" id="input_text" name="itext" placeholder=">_command" class="text_default" value="$">
+        <button type="button" class="button_1" id = "send_btn" onclick="runnn('text_in_textbox',get_text('input_text'));clear_text('input_text','$')">send</button>
+        <script>
+            var input = document.getElementById("input_text");
+
+            // Execute a function when the user releases a key on the keyboard
+            input.addEventListener("keyup", function(event) {
+                // Number 13 is the "Enter" key on the keyboard
+                if (event.keyCode === 13) {
+                // Trigger the button element with a click
+                document.getElementById("send_btn").click();
+                }
+            });</script>
+    </div>
 </body>
 </html>
