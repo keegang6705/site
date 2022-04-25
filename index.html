@@ -12,13 +12,15 @@
        <h1>อย่าาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาาา</h1>
        <!--<button type="button" onclick="alert('You pressed the button!')">Click me!</button>-->
    </div>
-   <div class="button_default">
-       <button type="button" onclick="print('a:',num('a',1))">a</button>
-       <button type="button" onclick="print('b:',num('b',1))">b</button>
-       <button type="button" onclick="print('c:',num('c',1))">c</button>
+   <div class="text_default">
+       <button type="button" class="button_default" onclick="print(num('a',1),'from a')">a</button>
+       <button type="button" class="button_default" onclick="print(num('b',1),'from b')">b</button>
+       <button type="button" class="button_default" onclick="print(num('c',1),'from c')">c</button>
    </div>
+   <button type="button" class="button_default" onclick="fun_snackbar(num('d',1),'from d')">d button</button>
+   <div id="snackbar-container"></div>
    <div class="error">
-        <p>hello<p>
+        <p> hello<br>um hellooo<p>
    </div>
 </body>
 </html>
