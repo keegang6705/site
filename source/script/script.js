@@ -44,7 +44,11 @@ function runnn(id,text){
         add_text(id,true,start+teg)
         add_text(id,true,"changed to "+teg.substring(6))
         let button = document.getElementById('send_btn').onclick = function(){runnn('text_in_textbox',get_text('input_text'));clear_text('input_text',`${teg.substring(6)}`);}
-    }else {
+    } else if(text.substring(0,7)=='$RUN JS'){
+        add_text(id,true,start+teg)
+        add_text(id,true,"JavaScript runner type exit() to exit JavaScript runner")
+        let button = document.getElementById('send_btn').onclick = function(){jsrunner('text_in_textbox',get_text(input_text));clear_text('input_text','');}
+    } else {
         add_text(id,true,start+teg)
         add_text(id,true,"unknow command "+teg)
     }
@@ -62,3 +66,14 @@ function start_program(id){
     text= 'Type "$help", "$copyright", "$credits" or "$license" for more information.'
     add_text(id,true,text)
     }
+function jsrunner(id,text){
+    let start = ">>"
+    if(text!=='exit()'){
+    let output = eval(text)
+    add_text(id,true,start+text)
+    add_text(id,true,output)
+    } else {
+      add_text(id,true,'exit program')
+      let button = document.getElementById('send_btn').onclick = function(){runnn('text_in_textbox',get_text('input_text'));clear_text('input_text','$');}
+    }
+}
