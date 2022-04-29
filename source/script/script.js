@@ -47,7 +47,7 @@ function runnn(id,text){
     } else if(text.substring(0,7)=='$RUN JS'){
         add_text(id,true,start+teg)
         add_text(id,true,"JavaScript runner type exit() to exit JavaScript runner")
-        let button = document.getElementById('send_btn').onclick = function(){jsrunner('text_in_textbox',get_text(input_text));clear_text('input_text','');}
+        let button = document.getElementById('send_btn').onclick = function(){jsrunner('text_in_textbox',get_text('input_text'));clear_text('input_text','');}
     } else {
         add_text(id,true,start+teg)
         add_text(id,true,"unknow command "+teg)
