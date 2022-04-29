@@ -73,6 +73,7 @@ function jsrunner(id,text){
       try{
         let output = eval(text);
         add_text(id,true,start+text);
+      }
       catch(err){
          add_text(id,true,err.message);
          clear_text('input_text','')
