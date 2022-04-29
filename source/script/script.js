@@ -45,12 +45,13 @@ function runnn(id,text){
         add_text(id,true,"changed to "+teg.substring(6))
         let button = document.getElementById('send_btn').onclick = function(){runnn('text_in_textbox',get_text('input_text'));clear_text('input_text',`${teg.substring(6)}`);}
     } else if(text.substring(0,7)=='$RUN JS'){
-        add_text(id,true,start+teg)
-        add_text(id,true,"JavaScript runner type exit() to exit JavaScript runner")
+        add_text(id,true,start+teg);
+        add_text(id,true,"JavaScript runner type exit() to exit JavaScript runner");
+        add_text(id,true,"note:console.log() will show in console not here");
         let button = document.getElementById('send_btn').onclick = function(){jsrunner('text_in_textbox',get_text('input_text'));clear_text('input_text','');}
     } else {
-        add_text(id,true,start+teg)
-        add_text(id,true,"unknow command "+teg)
+        add_text(id,true,start+teg);
+        add_text(id,true,"unknow command "+teg);
     }
 }
 function get_text(id){
@@ -62,18 +63,23 @@ function clear_text(id,text){
 }
 function start_program(id){
     text= 'keegang 3.10.3 (tags/v3.10.3:a342a49, ��� 32 20xx, ��:��:��) [��� 256 bit (AMD256)] on unknown os 256'
-    add_text(id,true,text)
+    add_text(id,true,text);
     text= 'Type "$help", "$copyright", "$credits" or "$license" for more information.'
-    add_text(id,true,text)
+    add_text(id,true,text);
     }
 function jsrunner(id,text){
     let start = ">>"
     if(text!=='exit()'){
-    let output = eval(text)
-    add_text(id,true,start+text)
-    add_text(id,true,output)
+      try{
+        let output = eval(text);
+        add_text(id,true,start+text);
+      catch(err){
+         add_text(id,true,err.message);
+         clear_text('input_text','')
+         add_text(id,true,output);
+      }
     } else {
-      add_text(id,true,'exit program')
+      add_text(id,true,'exit program');
       let button = document.getElementById('send_btn').onclick = function(){runnn('text_in_textbox',get_text('input_text'));clear_text('input_text','$');}
     }
 }
