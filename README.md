@@ -1,4 +1,4 @@
-# [site](https://keegang6705.github.io/Repository-name/)
+# [site](https://keegang6705.github.io/site/)
 ...
 <pre>
 อย่าๆๆๆๆ
