@@ -66,7 +66,7 @@ function start_program(id){
     add_text(id,true,text);
     text= 'Type "$help", "$copyright", "$credits" or "$license" for more information.'
     add_text(id,true,text);
-    }
+}
 function jsrunner(id,text){
     let start = ">>"
     if(text!=='exit()'){
@@ -76,6 +76,7 @@ function jsrunner(id,text){
         add_text(id,true,output);
       }
       catch(err){
+         add_text(id,true,start+text);
          add_text(id,true,err.message);
          clear_text('input_text','')
       }
