@@ -8,7 +8,7 @@
 .text_default {
   background-color: #363940;
   color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'arial', sans-serif;
   font-size: 10px;
 }
 .button_default{
